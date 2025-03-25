@@ -1,4 +1,4 @@
-# Photography Portfolio Website
+# Be Adventurous Photography
 
 A modern, responsive photography portfolio website built with Next.js and TailwindCSS.
 
