@@ -19,13 +19,13 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const activeSection = useActiveSection()
   const scrollPosition = useScrollPosition()
-  const showLogo = scrollPosition > 100 // Show logo after scrolling 100px
+  const showLogo = scrollPosition > 100
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b">
+      <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
         <a href="/" className="flex items-center space-x-2">
-          <div className="relative w-10 h-10">
+          <div className="relative w-8 md:w-10 h-8 md:h-10">
             <Image
               src="/images/branding/logo.png"
               alt="Logo"
@@ -37,7 +37,7 @@ export function Navigation() {
             />
           </div>
           <span
-            className={`text-xl font-serif transition-opacity duration-300 ${
+            className={`text-lg md:text-xl font-serif transition-opacity duration-300 ${
               showLogo ? 'opacity-0' : 'opacity-100'
             }`}
           >
@@ -61,19 +61,19 @@ export function Navigation() {
           ))}
         </div>
 
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
+            <Button variant="ghost" size="icon" className="md:hidden -mr-2">
+              <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent>
-            <div className="flex flex-col gap-4 mt-8">
+          <SheetContent side="right" className="w-[80%] sm:w-[385px]">
+            <div className="flex flex-col gap-6 mt-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-lg transition-colors ${
+                  className={`text-lg transition-colors hover:text-black ${
                     activeSection === link.href.slice(1)
                       ? "text-black font-medium"
                       : "text-gray-600"

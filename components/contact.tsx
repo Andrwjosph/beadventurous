@@ -59,16 +59,16 @@ export function Contact() {
     <section
       id="contact"
       ref={ref}
-      className={`min-h-screen py-20 bg-gray-50 section-animate ${isVisible ? 'visible' : ''}`}
+      className={`min-h-[100svh] py-16 sm:py-20 bg-gray-50 section-animate ${isVisible ? 'visible' : ''}`}
     >
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center heading-mix">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center heading-mix">
           Start Your <span>Adventure</span> With Us
         </h2>
         <div className="max-w-2xl mx-auto">
           {isSubmitted ? (
-            <div className="text-center space-y-4 py-8">
-              <h3 className="text-2xl font-semibold text-gray-800">Thank You for Contacting Us!</h3>
+            <div className="text-center space-y-4 py-6 sm:py-8 px-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">Thank You for Contacting Us!</h3>
               <p className="text-gray-600">
                 We have received your message and will reach out to you at{' '}
                 <span className="font-medium">{submittedEmail}</span> shortly.
@@ -84,9 +84,9 @@ export function Contact() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                     Name
                   </label>
@@ -94,11 +94,11 @@ export function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
                     required
                   />
                 </div>
-                <div>
+                <div className="space-y-2">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                     Email
                   </label>
@@ -106,13 +106,13 @@ export function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
                     required
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                <div className="space-y-2">
                   <label htmlFor="occasion" className="block text-sm font-medium text-gray-700">
                     Occasion
                   </label>
@@ -121,11 +121,11 @@ export function Contact() {
                     id="occasion"
                     name="occasion"
                     placeholder="e.g., Wedding, Birthday Party, Mehendi"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
                     required
                   />
                 </div>
-                <div>
+                <div className="space-y-2">
                   <label htmlFor="date" className="block text-sm font-medium text-gray-700">
                     Event Date
                   </label>
@@ -133,12 +133,12 @@ export function Contact() {
                     type="date"
                     id="date"
                     name="date"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
                     required
                   />
                 </div>
               </div>
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   Message
                 </label>
@@ -146,12 +146,12 @@ export function Contact() {
                   id="message"
                   name="message"
                   rows={6}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black resize-none"
                   required
                 />
               </div>
-              <div className="text-center">
-                <Button type="submit" disabled={isSubmitting}>
+              <div className="text-center pt-2">
+                <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto min-w-[200px]">
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </div>
