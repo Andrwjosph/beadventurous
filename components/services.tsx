@@ -38,10 +38,23 @@ export function Services() {
             <AccordionTrigger className="text-xl">Mehendi Celebrations</AccordionTrigger>
             <AccordionContent>
               <ul className="space-y-2 text-gray-700">
-                <li>Mehendi application documentation</li>
+                
                 <li>Artistic shots of mehendi designs</li>
                 <li>Candid guest interactions</li>
                 <li>Cultural rituals and traditions</li>
+                <li>Online gallery</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="prewedding">
+            <AccordionTrigger className="text-xl">Pre Wedding & Elopements</AccordionTrigger>
+            <AccordionContent>
+              <ul className="space-y-2 text-gray-700">
+                <li>Destination Shoots</li>
+                <li>Artistic shots of the couple</li>
+                <li>Candid interactions</li>
+                <li>Story based videos</li>
                 <li>Online gallery</li>
               </ul>
             </AccordionContent>

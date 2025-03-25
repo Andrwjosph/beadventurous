@@ -25,7 +25,7 @@ export function Hero() {
           Capturing Life's <span className="italic">Beautiful</span> Moments
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
-          Professional photography for weddings, portraits, and special events
+          Professional photography & videography for weddings, portraits, and special events
         </p>
       </div>
     </section>
