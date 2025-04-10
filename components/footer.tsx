@@ -7,9 +7,9 @@ export function Footer() {
         <h3 className="text-xl mb-6">Connect with be.adventurous</h3>
 
         <div className="flex flex-col gap-4 items-center mb-8">
-          <a href="mailto:info@be-adventurous.com" className="hover:text-gray-300 transition-colors">
+          <a href="mailto:a.arulthas@gmail.com" className="hover:text-gray-300 transition-colors">
             <Mail className="inline-block mr-2" size={20} />
-            info@be-adventurous.com
+            a.arulthas@gmail.com
           </a>
           <a
             href="https://facebook.com/be.adventurous"
@@ -21,7 +21,7 @@ export function Footer() {
             be.adventurous
           </a>
           <a
-            href="https://instagram.com/be.adventurous"
+            href="https://instagram.com/be.adventurous__"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
