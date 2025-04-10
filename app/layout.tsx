@@ -9,8 +9,8 @@ const ebGaramond = EB_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Photography Portfolio",
-  description: "Professional photography services for all your special moments",
+  title: "Be Adventurous",
+  description: "Professional photography & videography for your special moments",
 }
 
 export default function RootLayout({
